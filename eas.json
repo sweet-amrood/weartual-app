@@ -1,0 +1,29 @@
+{
+  "cli": {
+    "version": ">= 18.11.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_API_URL": "http://192.168.1.9:5001",
+        "EXPO_PUBLIC_WEB_CLIENT_URL": "http://localhost:5173"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "env": {
+        "EXPO_PUBLIC_API_URL": "http://192.168.1.9:5001",
+        "EXPO_PUBLIC_WEB_CLIENT_URL": "https://weartual.netlify.app"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
